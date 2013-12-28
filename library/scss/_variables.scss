@@ -1,0 +1,305 @@
+/**
+ * Breakpoints
+ *
+ */
+$break-small: 500px;
+$break-medium: 800px;
+$break-large: 1000px;
+$break-xlarge: 1200px;
+
+/**
+ * COLOR SCHEME
+ *
+ */
+$black:                 #000;
+$gray1:                 #111;  
+$gray2:                 #222;
+$gray3:                 #333;
+$gray4:                 #444;
+$gray5:                 #666;
+$gray6:                 #999;
+$gray7:                 #aaa;
+$gray8:                 #ddd;
+$gray9:                 #e5e5e5;
+$gray10:                #f5f5f5;
+$white:                 #fff; 
+
+$green:                 #83AF9B;
+$red:					#FE4365;
+
+
+//Color Scheme: http://colorschemedesigner.com/#4Y400w0w0w0w0
+$baseColor1:			#AD009F; //Pink
+$baseColor1MattLight:	#82217A;
+$baseColor1MattDark:	#710067;
+$baseColor1ClearDark:	#D636C9;
+$baseColor1ClearLight:	#D660CC;
+
+$baseColor2:			#0C5DA5; //Blue
+$baseColor2MattLight:	#26537C;
+$baseColor2MattDark:	#043A6B;
+$baseColor2ClearDark:	#408DD2;
+$baseColor2ClearLight:	#679FD2;
+
+$baseColor3:			#FF9500; //Orange
+$baseColor3MattLight:	#BF8430;
+$baseColor3MattDark:	#A66100;
+$baseColor3ClearDark:	#FFB040;
+$baseColor3ClearLight:	#FFC573;
+
+$baseColor4:			#C6F500; //Yellow-greeen
+$baseColor4MattLight:	#9DB82E;
+$baseColor4MattDark:	#819F00;
+$baseColor4ClearDark:	#D6FA3F;
+$baseColor4ClearLight:	#E0FA71;
+	
+$baseColor1SuperLight:	lighten($baseColor1ClearLight, 20%);
+$baseColor2SuperLight:	lighten($baseColor2ClearLight, 20%);
+$baseColor3SuperLight:	lighten($baseColor3ClearLight, 20%);
+$baseColor4SuperLight:	lighten($baseColor4ClearLight, 20%);
+
+$baseColor1UltraLight:	lighten($baseColor1ClearLight, 35%);
+$baseColor2UltraLight:	lighten($baseColor2ClearLight, 37%);
+$baseColor3UltraLight:	lighten($baseColor3ClearLight, 25%);
+$baseColor4UltraLight:	lighten($baseColor4ClearLight, 25%);
+
+/**
+ * COLORS
+ *
+ */
+$linkBackgroundColor:   	$baseColor4SuperLight; //#f7ffcf
+$linkColorHover:        	grayscale($linkBackgroundColor);
+$linkBackgroundColorHover:  $baseColor3SuperLight;
+
+$tagsBackgroundColor: $gray9;
+$tagsBackgroundColorHover: $linkBackgroundColorHover;
+$tagsFontColor: $gray6;
+$tagsFontColorHover: $gray2;
+
+
+$has-sidebar-sidebar-width: 30%;
+$has-sidebar-sidebar-max-width: 360px;
+$has-sidebar-sidebar-background-color: $black;
+$has-sidebar-sidebar-font-color: $white;
+$has-sidebar-sidebar-border-color: $gray6;
+
+/**
+ * Archive
+ *
+ */
+$archiveBarBackground: $gray7;
+$archiveFontColor: $white;
+
+/*
+$backgroundColor1:		$baseColor1UltraLight;
+$backgroundColor2:		$baseColor2UltraLight;
+$backgroundColor3:		$baseColor3UltraLight;
+$backgroundColor4:		$baseColor4UltraLight;
+
+$backgroundColor1Border:	darken($baseColor1UltraLight, 10%);
+$backgroundColor2Border:	darken($baseColor2UltraLight, 10%);
+$backgroundColor3Border:	darken($baseColor3UltraLight, 10%);
+$backgroundColor4Border:	darken($baseColor4UltraLight, 10%);
+*/
+
+$preBackground:			$gray10;
+$preBorder:				$gray8;
+
+$headingsMarkingColor:                 #83AF9B;
+
+$leadImageCreditsColor:			$gray6;
+$leadImageCreditsColorHover:	$gray9;
+
+
+$authorTextColor:	$gray7;
+
+
+$menuToggleButtonColor:             #fff;
+$menuSmallScreenToggleButtonColor:  $menuToggleButtonColor;
+$menuToggleButtonActiveColor:       #ff0;
+
+
+
+// Scaffolding 
+// -------------------------
+$bodyBackground:        $white;
+$pageInnerBackground:   $white;
+
+//Footer
+$footerBackground:      $gray3;
+$footerBorderTop:       $black;
+$footerColor:           $gray6;
+$footerLinkColor:       $gray8;
+$footerLinkColorHover:  $gray10;
+
+
+
+
+
+/**
+ * Typography
+ *
+ */
+
+//Base font
+$baseFontFamily:		'Roboto', Georgia, "Times New Roman", Times, serif;
+$baseFontWeight:		300;
+$baseFontColor:			#555;
+
+//Font size, used only for input heights
+$base-font-size: 16px;
+$base-line-height: 28px;
+$baseLineHeight: 1.75;
+
+
+$commentsLinkColor:		#288ce4;
+
+
+//Headings
+//$headingsFontFamily:	'Josefin Slab', "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$headingsFontWeight:    300;
+
+$headingsFontFamily:	'Varela Round', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headingsFontWeight:    400;
+
+$headingsFontWeightLowHeadings: 400; //For like h3-h6
+$headingsColor:         black;
+
+//Other font style
+$monoFontFamily:        "Droid Sans Mono", "Courier New", monospace;
+
+$quoteFontFamily:		'Josefin Slab', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$quoteFontWeight:		300;
+
+$sidebarHeadingFontFamily:  $quoteFontFamily;
+$sidebarHeadingFontWeight:  700;
+$sidebarTextColor:          white;
+$sidebarLinkColor:           $sidebarTextColor;
+$sidebarlinkColorHover:     $linkBackgroundColorHover;
+
+$asideFontFamily:		$headingsFontFamily;
+$asideFontWeight:		400;
+$asideFontColor:		$gray5;
+
+$asideCreditsFontColor:			$gray7;
+$asideCreditsLinkColor: 		$gray7;
+$asideCreditsLinkColorHover:	$gray1;
+
+$popupCaptionFontColor:	white;
+
+//Menu toggle button
+
+// Component sizing 
+// -------------------------
+
+// $fontSizeLarge:         18px;
+// $fontSizeSmall:         12px;
+// $lineHeightSmall:       20px;
+// $paddingLarge:          10px 25px; 
+// $paddingSmall:          2px 10px;
+
+ $baseBorderRadius:      2px;
+ $borderRadiusLarge:     4px;
+ $borderRadiusSmall:     1px;
+
+// Buttons 
+// -------------------------
+$btnBackground:                     $linkBackgroundColor;
+$btnBackgroundHover:                $linkColorHover;
+
+$btnPrimaryBackground:              #1abc9c;
+
+$btnInfoBackground:                 #3498db;
+
+$btnSuccessBackground:              #7cc576;   
+
+$btnWarningBackground:              #f1c40f;
+
+$btnDangerBackground:               #e74c3c;
+
+$btnInverseBackground:              #34495e;
+
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+$zindex0:               1000;
+$zindex1:               1010;
+$zindex2:               1020;
+$zindex3:               1030;
+$zindex4:               1040;
+$zindex5:               1050;
+
+
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $gray6;
+
+
+// Hr border color
+// -------------------------
+$hrBorder:                $gray9;
+
+
+// Horizontal forms & lists
+// -------------------------
+$horizontalComponentOffset:       180px;
+
+
+// Tables
+// -------------------------
+$tableBackground:                   transparent; // overall background-color
+$tableBackgroundAccent:             #f9f9f9; // for striping
+$tableBackgroundHover:              #f5f5f5; // for hover
+$tableBorder:                       $gray9; // table and cell border
+
+
+// Forms
+// -------------------------
+$inputBackground:               $white;
+$inputBorder:                   $gray9;
+$inputBorderRadius:             $baseBorderRadius;
+$inputDisabledBackground:       $gray9;
+$formActionsBackground:         $gray10;
+$inputHeight:                   $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
+
+
+// Form states and alerts
+// -------------------------
+$warningText:             #c09853;
+$warningBackground:       #fcf8e3;
+$warningBorder:           darken($warningBackground, 3%);
+
+$errorText:               #b94a48;
+$errorBackground:         #f2dede;
+$errorBorder:             darken($errorBackground, 3%);
+
+$successText:             #468847;
+$successBackground:       #dff0d8;
+$successBorder:           darken($successBackground, 5%);
+
+$infoText:                #3a87ad;
+$infoBackground:          #d9edf7;
+$infoBorder:              darken($infoBackground, 7%);
+
+
+// Layout values
+// --------------------------------------------------
+
+// layout gutter
+$layoutGutterWidth:                 40px;
+$layoutGutterWidth767:              20px;
+
+// side header
+$sideHeaderHeightTouch:             50px;
+$sideHeaderHeightNoTouch:           40px;
+
+// secondary
+$siteNavWidth:                    200px;
+
+// side content
+$secondaryWidth:                  300px;
+

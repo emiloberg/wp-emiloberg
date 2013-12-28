@@ -1,0 +1,225 @@
+@import "compass";
+@import "vendor/magnific-popup";
+
+
+/**
+ * Color picker used for setting main color of image in image library
+ * 
+ */
+.media-sidebar .iris-picker {
+  margin-left: -90px;
+}
+
+/**
+ * Admin table
+ * 
+ */
+.admin-form-table {
+  border-collapse: collapse;
+  clear: both;
+  text-align: left;
+
+  td, th {
+    padding: 0.5em;
+  }
+
+  td.output {
+    width: 3em;
+  }
+}
+
+/**
+ * Front Page Image Preview Window
+ *
+ */
+
+.preview-container-sidebar {
+  width: 360px;
+  float: left;
+}
+
+.preview-container-top {
+  width: 800px;
+  float: left;
+  margin-left: 30px;
+}
+
+#image-preview-sidebar {
+  width: 360px;
+  height: 800px;
+  overflow: hidden;
+  float: left;
+  background: #000000;
+}
+
+.preview-sidebar-range {
+  width: 354px;
+}
+
+.preview-top-range {
+  margin-top: 26px;
+  width: 395px;
+  position: relative;
+  left: -425px;
+  @include transform-origin(100%, 0%);
+  @include rotate(-90deg);
+}
+
+
+#image-preview-top {
+  width: 800px;
+  height: 400px;
+  overflow: hidden;
+  background: #000000;
+  float: left;
+  margin-top: -25px;
+}
+
+.section-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: 100;
+}
+
+p.submit {
+  clear: both;
+}
+
+#category-image-select {
+  display: none;
+  background: #ccc;
+}
+
+.toggle-image-previews,
+.close-category-image-select {
+  display: block;
+  width: 100%;
+  float: left;
+  clear: both;
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  padding: 1em 0;
+  text-align: center;
+}
+
+
+
+/**
+ * POPUP
+ *
+ */
+.white-popup {
+  position: relative;
+  background: white;
+  padding: 20px;
+  width: auto;
+  margin: 40px auto;
+}
+
+.image-preview-popup {
+  max-width: 1192px;
+}
+
+.image-select-popup {
+  max-width: 90%;
+}
+
+#popup-preview-only-image {
+  max-width: 1200px;
+}
+
+/**
+ * WITHIN IMAGE SELECT POPUP
+ * 
+ */
+.category-image-select-container {
+  width: 100%;
+  background: white;
+  text-align: center;
+}
+
+.image-select-pager {
+  clear: both;
+}
+
+.image-select {
+  width: 250px;
+  height: 187px;
+  display: inline-block;
+  vertical-align: bottom; //Removes small space below image
+  cursor: pointer;
+}
+
+.image-select-not-loaded {
+  display: none;
+}
+
+.image-select-show-more {
+  display: block;
+  width: 80%;
+  clear: both;
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+  padding: 1em 0;
+  text-align: center;
+  margin: 0 10%;
+}
+
+.popup-foot {
+  display: block;
+  clear: both;
+  margin: 2em 0;
+}
+
+/**
+ * WITHIN PREVIEW BIG IMAGE POPUP
+ *
+ */
+.preview-big-cat-image {
+  width: 100%;
+  display: block;
+}
+
+
+/**
+ * Table
+ *
+ */
+.posts-col {
+  width: 30px;
+}
+
+.preview-col {
+  width: 50px;
+}
+
+.cat-col {
+  width: 350px;
+}
+
+tr.changed {
+  background-color: #FCF8CC;
+}
+
+tr.divide-after td {
+  border-bottom: 3px solid #ccc;
+}
+
+
+
+/**
+ * MIXINS/FUNCTIONS
+ * 
+ */
+.clearfix {
+  zoom: 1;
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+}

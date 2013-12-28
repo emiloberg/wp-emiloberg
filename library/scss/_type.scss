@@ -1,0 +1,520 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Droid+Serif:400,700,400italic,700italic|Varela+Round);
+//@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic);
+//@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic);
+//@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+//@import url(http://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic&subset=latin,latin-ext);
+//@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&subset=latin,latin-ext);
+//@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+//@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic&subset=latin,latin-ext);
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700);
+//@import url(http://fonts.googleapis.com/css?family=Rokkitt:400,700);
+//@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:700);
+//@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100);
+//@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+//@import url(http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister);
+//@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+//@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+
+@include establish-baseline;
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+
+  font-family: $headingsFontFamily;
+  font-weight: $headingsFontWeight;
+  color: $headingsColor;
+
+
+  @include respond-to(medium) {
+    .entry-content & {
+      /*
+                  border-left: 5px solid $headingsMarkingColor;
+                  margin-left: -15px;
+                  padding-left: 10px;
+      */
+    }
+  }
+}
+
+h1 {
+  @include adjust-font-size-to(36px);
+}
+
+h1.single-title {
+  @include adjust-font-size-to(32px);
+
+  @include respond-to(small) {
+    @include adjust-font-size-to(64px);
+  }
+}
+
+h2 {
+  @include adjust-font-size-to(30px);
+}
+
+h3, h4, h5, h6 {
+  @include adjust-font-size-to(24px);
+  font-weight: $headingsFontWeightLowHeadings;
+}
+
+body {
+	font-weight: $baseFontWeight;
+	font-family: $baseFontFamily;	
+	color: $baseFontColor;
+//	@include vertical-rhythm-background; //### debug, showing background lines.
+}
+
+p {
+  @include rhythm(0, 0, 1, 0);
+
+  .no-bottom-padding &,
+  &.no-bottom-padding {
+    padding-bottom: 0;
+  }
+}
+
+a {
+	background: $linkBackgroundColor;
+	color: $baseFontColor;
+	text-decoration: none;
+	
+	&:hover {
+		background-color: $linkBackgroundColorHover;
+	}
+	
+	
+	#disqus_thread & {
+		color: $commentsLinkColor;	//Disqus iframe inherits color from on-site css.
+	}
+
+  h1 &, h2 &, h3 &, h4 &, h5 &, h6 & {
+    background: none;
+  }
+
+  &.excerpt-link {
+
+    background: none;
+
+    &:hover {
+      background: none;
+    }
+
+
+  }
+
+  .tags & {
+    background-color: $tagsBackgroundColor;
+    color: $tagsFontColor;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    @include border-radius(1em);
+    @include transition(all 0.3s ease);
+
+    &:hover {
+
+      color: $tagsFontColorHover;
+      background-color: $tagsBackgroundColorHover;
+    }
+
+  }
+
+}
+
+
+
+blockquote {
+	margin: 0;
+	text-align: center;
+	font-style: italic;
+	font-family: $quoteFontFamily;
+	font-weight: $quoteFontWeight;
+
+	@include adjust-font-size-to(24px, 1); 	
+	
+	p {
+		@include rhythm(0, 0, 0, 1, 24px);
+	}
+	
+	cite {
+		@include adjust-font-size-to(18px, 1, 24px);
+		@include rhythm(1, 0, 0, 1, 18px); 
+	}		
+	
+	@include border-radius();
+	padding-left: 5%;
+	padding-right: 5%;
+  
+	.entry-content & {
+
+		@include respond-to(medium) {
+			background: none;
+			margin-left: -20%;
+			margin-right: -20%;  		  			
+		}
+		@include respond-to(xlarge) {
+			@include adjust-font-size-to(30px);
+			margin-left: -150px;
+			margin-right: -150px;	  			
+			p {
+				@include rhythm(0, 0, 0, 1, 30px);
+			}
+			
+			cite {
+				@include adjust-font-size-to(18px, 1, 30px);
+				@include rhythm(1, 0, 1, 0, 18px); 
+			}
+			
+		}
+ 
+	
+		cite {
+	  		font-style: normal;
+	  		display: block;
+	  		text-align: center;
+	  	}
+	  	
+	}  	
+}
+
+
+.entry-content {
+	pre {	
+		color: lighten($baseFontColor, 20%);
+		font-family: $monoFontFamily;
+		background-color: $preBackground;		
+		border-color: $preBorder;		
+	
+		@include adjust-font-size-to(14px, 1);		
+		@include rhythm-borders(1px, 1, 14px);
+
+		
+		
+		@include respond-to(medium) {
+			margin-left: -10%;
+			margin-right: -10%;  		  			
+		}
+		@include respond-to(xlarge) {
+			margin-left: -100px;
+			margin-right: -100px;	  
+		}		
+		
+	}
+}
+
+
+
+
+
+// Lists
+// --------------------------------------------------
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+	margin-left: 24px;
+}
+
+ul 			{ list-style: disc; }
+ul ul 		{ list-style: circle; }
+ul ul ul	{ list-style: square; }
+
+ol 			{ 
+	list-style: decimal; list-style: decimal-leading-zero; 
+	padding-left: 14px;
+}
+ol ol 		{ list-style: upper-roman; }
+ol ol ol	{ list-style: cjk-ideographic; }
+
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+// Emphasis & misc
+// -------------------------
+
+tt, 
+var,
+code,
+kbd {
+	font-style: normal;
+	font-family: $monoFontFamily;
+	background-color: $gray9;
+	padding-left: 5px;
+	padding-right: 5px;
+	@include adjust-font-size-to(14px);
+}
+
+address {
+  display: block;
+  font-style: normal;
+}
+
+// Table
+tr, td, th {
+	padding: 0;
+}
+
+thead, th {
+	color: $white;
+	background-color: $gray6;
+	font-weight: 400;
+}
+
+tr:nth-child(2n+2) { 
+	background-color: $gray9;
+}
+
+tr:nth-child(2n+2) th { 
+	background-color: $gray5;
+}
+
+th:nth-child(2n+2) { 
+	background-color: $gray5;
+}
+
+td, th {
+	@include rhythm(0, 0.25, 0.25, 0);
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+// Abbreviations and acronyms
+abbr[title],
+abbr[data-original-title],
+acronym {
+	cursor: help;
+	border-bottom: none;
+	@extend tt;
+
+}
+
+ins {
+	text-decoration: none;
+	background-color: $green;
+}
+
+del,
+strike {
+	text-decoration: line-through;
+	background-color: $red;
+}
+
+small   { @include adjust-font-size-to(14px); } 
+strong  { font-weight: 700; }
+em      { font-style: italic; }
+
+hr {
+    border: 0;    
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    text-align: center;
+    @include rhythm(0.25, 0, 0, 0.75);    
+    
+    &:after {
+	    content: "￬";
+	    display: inline-block;
+	    position: relative; 
+	    top: -0.6em;  
+	    font-size: 1.5em;
+	    padding: 0 0.25em;
+	    background: white;
+    }
+}
+    
+dl {
+	@include rhythm(1, 0, 0, 0);
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin-left: 24px;
+	@include trailer(1);
+}
+
+
+
+// Utility classes
+.muted               { color: $gray6; }
+a.muted:hover,
+a.muted:focus        { color: darken($gray6, 10%); }
+
+.text-warning        { color: $warningText; }
+a.text-warning:hover,
+a.text-warning:focus { color: darken($warningText, 10%); }
+
+.text-error          { color: $errorText; }
+a.text-error:hover,
+a.text-error:focus   { color: darken($errorText, 10%); }
+
+.text-info           { color: $infoText; }
+a.text-info:hover,
+a.text-info:focus    { color: darken($infoText, 10%); }
+
+.text-success        { color: $successText; }
+a.text-success:hover,
+a.text-success:focus { color: darken($successText, 10%); }
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+
+
+
+/**
+ * DISQUS
+ * 
+ */
+#disqus_thread {
+	font-family: $baseFontFamily !important;
+	font-weight: $baseFontWeight !important;
+	color: $baseFontColor !important;
+}
+
+
+/*
+.text-icon-left {
+  padding-left: 20px;
+  text-align: left;
+
+  i {
+    position: relative;
+    left: -20px
+  }
+
+  span {
+    position: relative;
+    left: -15px;
+  }
+}
+
+.text-icon-right {
+  padding-right: 20px;
+  text-align: right;
+
+  i {
+    position: relative;
+    right: -20px
+  }
+
+  span {
+    position: relative;
+    right: -15px;
+  }
+}
+*/
+
+// Page header
+// -------------------------
+
+/*
+.page-header {
+  padding-bottom: 20px;
+  margin: 0 0 30px;
+  border-bottom: 5px solid $gray3;
+
+  .page-title {
+    margin: 0;
+  }
+}
+
+.taxonomy-description {
+  margin-top: 12px;
+}
+*/
+
+
+// Lists
+// --------------------------------------------------
+
+
+/*
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// style 1
+ul.style-1,
+ol.style-1 {
+  list-style: none;
+  margin-left: 0;
+
+  br {
+    display: none;
+  }
+
+  li {
+    overflow: hidden;
+    line-height: 40px;
+    border-bottom: 1px solid $gray9;
+
+    &:first-child {
+      border-top: 1px solid $gray9;      
+    }
+
+//    line-height: $layoutGutterWidth;
+  }
+
+  .pull-right {
+    color: $gray3;
+  }
+}
+*/
+// Description Lists
+/*
+dl {
+  margin-bottom: $baseLineHeight;
+}
+dt,
+dd {
+  line-height: $baseLineHeight;
+}
+dt {
+  font-weight: bold;
+  color: $baseFontColor;
+}
+dd {
+  margin-left: $baseLineHeight / 2;
+}
+*/
+// MISC
+// ----
+
+		
+
+
+

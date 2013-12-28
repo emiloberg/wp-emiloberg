@@ -1,0 +1,75 @@
+//@import "icons/*.png";
+//@include all-icons-sprites;
+
+.sprite-64 {
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+}
+
+.sprite {
+  background: url('../images/sprite.png') no-repeat;
+}
+
+.sprite-myavatar { background-position: 0 0; }
+.sprite-facebook { background-position: 0 -248px; }
+.sprite-linkedin { background-position: 0 -184px; }
+.sprite-twitter { background-position: 0 -120px; }
+
+a.sprite-link {
+  background-color: transparent;
+  &:hover {
+    background-color: transparent;
+    opacity: 0.7;
+    @include transition(all 0.3s ease);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.sprite-facebook {
+  background: url('../originals/flat_social_icons/flat_social_style_01/png/32/02_facebook.png') no-repeat;
+  background-position: 0 0;
+  height: 32px;
+  width: 32px;
+}
+
+.sprite-twitter {
+  background: url('../originals/flat_social_icons/flat_social_style_01/png/32/01_twitter.png') no-repeat;
+  background-position: 0 0;
+  height: 32px;
+  width: 32px;
+}
+
+.sprite-linkedin {
+  background: url('../originals/flat_social_icons/flat_social_style_01/png/32/07_linkedin.png') no-repeat;
+  background-position: 0 0;
+  height: 32px;
+  width: 32px;
+}
+
+
+
+
+/*
+.sprite-64 {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+}
+*/
+
+/*
+.sprite-64 {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+}
+*/
