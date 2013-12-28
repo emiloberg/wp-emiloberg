@@ -11,7 +11,7 @@ A _very_ text focused Wordpress Theme. This is for sites where the text (and its
 
 
 ## Install instructions
-1. [Download the theme](https://bitbucket.org/emiloberg/emil-oberg-wordpress-theme/get/master.zip)
+1. [Download the theme](https://github.com/emiloberg/wp-emiloberg/archive/master.zip) (Master branch ZIP)
 2. Install and activate the theme by going to _Apperance_ > _Themes_ > _Add New_ > _Upload_
 3. If you're going to embed material (such as YouTube videos, Flickr images etc), it's highly recomended to install the plugin [Iframely](http://wordpress.org/plugins/iframely/).
 4. You'll find theme options under _Apperance_ > _EO Theme Options_. At the moment, the only theme options you find is settings for setting category images (se below)
